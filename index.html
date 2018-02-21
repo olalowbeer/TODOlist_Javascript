@@ -8,7 +8,7 @@
 		<meta name="description" content="todo">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="css/style.css">
 
 	</head>
 	<body>
@@ -22,10 +22,13 @@
                 <ul id="todolist">
                 </ul>-->
 		<div class="main-container">
-				<div class="main center hidden fadein">
+				<div class="main">
 
 				<div class="content">
-						<h1>TODOWS</h1>
+                    <div class="boxHeader">
+                       <div class="headerText"><h1>TODOWS</h1>
+                        </div>
+                        </div>
 						<input id="input" type="text" placeholder="type here" autofocus>
 						<span onclick="newElement()" class="addBtn"></span>
                             <button id="addButton">add</button>
@@ -35,7 +38,7 @@
                              <ul id="onGoing"></ul>
                             </div>
                             <div class="rightfinished">
-                               <h2>complete toDOS</h2>
+                               <h2>Completed</h2>
                                 <ul id="finished"></ul>
                              </div>
                             </div>
@@ -45,7 +48,7 @@
 				</div>
                    <div class="buttonTest">
                     <button id="deleteAllButton">Delete all</button>
-                    <h3> -- press Delete to remove newly installed toDos</h3>
+                    <h3> -- press Delete all to remove newly installed toDOS</h3>
                     </div>
               </div>
 			</div>

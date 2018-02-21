@@ -6,8 +6,6 @@
 
 body{
     height: 100%;
-    //display: flex;
-    justify-content: center;
     font-family: font;
     background-color: #0415A8;
     background-attachment: fixed;
@@ -17,13 +15,17 @@ body{
 }
 
 
-
 .main-container{
     //border: 1px solid white;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
 
+}
+.main{
+    border: 1px solid white;
+    min-width: 250px;
+    margin: 2px;
 }
 
 #onGoing{
@@ -52,7 +54,7 @@ li{
 
     list-style-type: none;
     width: 100%;
-    height: 30px;
+    height: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
     //background-color: rgba(250, 250, 250, 0.6)
@@ -62,10 +64,16 @@ li{
 li#items{
     text-align: center;
     color: #F5F358;
+    -webkit-animation: fadein 3s ease 0s forwards;
+    animation: fadein 3s ease 0s forwards;
+    animation-fill-mode: both !important;
+    visibility: visible !important;
+    
 }
 
 .content{
-
+    
+        //width: 100%;
         border: 1px solid white;
         box-sizing: border-box;
 
@@ -74,6 +82,10 @@ li#items{
 }
 #onGoing{
     text-align: center;
+    -webkit-animation: fadein 1s ease 0s forwards;
+    animation: fadein 1s ease 0s forwards;
+    animation-fill-mode: both !important;
+    visibility: visible !important;
 }
 
 #finished{
@@ -81,24 +93,38 @@ li#items{
 }
 ul {
 	list-style: none;
+    //border: 1px solid white;
+    
 }
 ul li:before {
     
 	//content: "\25b6";
 }
-h1{
-    margin-left: 150px;
-    margin-right: 150px;
+.boxHeader {
+    height: 100px;
+	display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.headerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 40px;
     background: #A8AAB3;
+}
+h1{
+    
+    padding: 0px;
+    margin: 0px;
     color: white;
-    padding-top: none;
-    text-align: center;
     box-sizing: border-box;
     
 }
 h2{
    color: white; 
-    text-align: center;
+   text-align: center;
 }
 
 
@@ -138,12 +164,17 @@ h2{
      cursor: pointer;
     color: white;
     font-size: 0.8rem;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     //border: 3px solid #fff;
     border: none;
+    margin-bottom: 10px;
     padding: 4px 10px;
     line-height: 1;
-    width: 84px;
+    width: 74px;
+      -webkit-animation: fadein 1s ease 0s forwards;
+    animation: fadein 1s ease 0s forwards;
+    animation-fill-mode: both !important;
+    visibility: visible !important;
 }
 #deleteButton:hover{
     background-color: #A60A12;
@@ -155,14 +186,18 @@ h2{
      cursor: pointer;
     color: white;
     font-size: 0.8rem;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     //background: rgba(0, 0, 0, 0.2);
     //border: 3px solid #fff;
     border: none;
-    //margin-left: 20px;
+margin-bottom: 10px;
     padding: 4px 10px;
     line-height: 1;
     width: 74px;
+      -webkit-animation: fadein 1s ease 0s forwards;
+    animation: fadein 1s ease 0s forwards;
+    animation-fill-mode: both !important;
+    visibility: visible !important;
 }
 #doneButton:hover{
     background-color: #A60A12;
@@ -195,6 +230,7 @@ h2{
     padding: 4px 10px;
     line-height: 1;
     width: 84px;
+    
 }
 #deleteAllButton:hover{
     background-color: #A60A12;
@@ -226,8 +262,8 @@ h3:nth-child(2){
 
 
 .fadein {
-  -webkit-animation: fadein 3s ease 0s forwards;
-    animation: fadein 3s ease 0s forwards;
+  -webkit-animation: fadein 1s ease 0s forwards;
+    animation: fadein 1s ease 0s forwards;
     animation-fill-mode: both !important;
     visibility: visible !important;
 }
@@ -253,3 +289,30 @@ h3:nth-child(2){
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 560px){
+    
+    h1{
+    
+    }
+    #input{
+        width: 100%;
+    }
+    
+    #addButton {
+	width: 100%;
+}
+    
+    .rows{
+        display: block;
+        
+    }
+    .leftrow {
+	width: 100%;
+}
+    .rightfinished {
+	width: 100%;
+}
+}
+
+
