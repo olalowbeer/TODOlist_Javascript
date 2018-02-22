@@ -2,62 +2,58 @@
 
 <html class="no-js" lang="">
 	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Javascript TODO list</title>
-		<meta name="description" content="todo">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Javascript TODO list</title>
+    <meta name="description" content="todo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-	</head>
-	<body>
-		
-                <!--<div id="myDIV" class="header">
-                  <h2 style="margin:5px">My To Do List</h2>
-                  <input type="text" id="myInput" placeholder="Title...">
-                  <span onclick="newElement()" class="addBtn">Add</span>
-                </div>
+</head>
 
-                <ul id="todolist">
-                </ul>-->
-		<div class="main-container">
-				<div class="main">
+<body>
+    <header>
+        <h3>cMOS todos setup utility, (C)Copyright 1337-1338, Lowbeer, Inc</h3>
+    </header>
+    <div class="main-container">
+        <div class="main">
 
-				<div class="content">
-                    <div class="boxHeader">
-                       <div class="headerText"><h1>TODOWS</h1>
-                        </div>
-                        </div>
-						<input id="input" type="text" placeholder="type here" autofocus>
-						<span onclick="newElement()" class="addBtn"></span>
-                            <button id="addButton">add</button>
-						<div class="rows"><div class="leftrow">
-                           <h2>toDOS</h2>
-                            						
-                             <ul id="onGoing"></ul>
-                            </div>
-                            <div class="rightfinished">
-                               <h2>Completed</h2>
-                                <ul id="finished"></ul>
-                             </div>
-                            </div>
-                        
-<!--<ul class="finished-list"></ul>-->
-				
-				</div>
-                   <div class="buttonTest">
-                    <button id="deleteAllButton">Delete all</button>
-                    <h3> -- press Delete all to remove newly installed toDOS</h3>
+            <div class="content">
+                <div class="boxHeader">
+                    <div class="headerText">
+                        <h1>TODOWS</h1>
                     </div>
-              </div>
-			</div>
-			
-		<script async src="main.js"></script>
-	</body>
-	<footer>
-			<div class="footer">
-			<h3>Set frequency, spread spectrum function</h3>
-			<h3>v13.37 (C)Copyright 1337-1338, Swedish Elite Trends, Inc</h3></div>
-			</footer>
+                </div>
+                <div class="inputandbutton">
+                <input id="input" type="text" placeholder="type here" autofocus>
+                <button id="addButton">add</button>
+                </div>
+                <div class="rows">
+                    <div class="leftrow">
+                        <h2>toDOS</h2>
+
+                        <ul id="active"></ul>
+                    </div>
+                    <div class="rightfinished">
+                        <h2>Completed</h2>
+                        <ul id="finished"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonTest">
+                <button id="deleteAllButton">Delete all</button>
+                <h3> -- press Delete all to remove newly installed toDOS</h3>
+            </div>
+        </div>
+    </div>
+  <footer>
+    <div class="footer">
+        <h3>Set frequency, spread spectrum function</h3>
+        <h3>v13.37 (C)Copyright 1337-1338, Lowbeer, Inc</h3>
+     </div>
+   </footer>
+<script async src="main.js"></script>
+</body>
+
 </html>

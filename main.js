@@ -1,4 +1,4 @@
-const onGoing = document.getElementById('onGoing');
+const active = document.getElementById('active');
 const finished = document.getElementById('finished');
 const addButton = document.getElementById('addButton');
 const input = document.getElementById('input');
@@ -6,6 +6,7 @@ const listItems = document.querySelectorAll('li');
 const deleteAllButton = document.getElementById('deleteAllButton');
 
 
+//If you press Enter
 input.addEventListener('keydown', function handleKeydown(e) {
     var text = input.value;
 
@@ -21,7 +22,7 @@ input.addEventListener('keydown', function handleKeydown(e) {
 
 
 
-//add item to todolist
+//add item to todolist(active)
 addButton.addEventListener('click', addList);
 
 function addList() {
@@ -29,57 +30,59 @@ function addList() {
     const li = document.createElement('li')
     li.id = "items";
     li.innerText = input.value;
-    document.getElementById('onGoing').appendChild(li);
-
-    //lägger till doneknapp i onGoing
+    document.getElementById('active').appendChild(li);
+    
+    
+     //adds a donebutton to active list
     var doneButton = document.createElement('button');
     const t = document.createTextNode("Done");
     doneButton.id = "doneButton";
     doneButton.appendChild(t);
-    onGoing.appendChild(doneButton);
+    active.appendChild(doneButton);
 
-    //lägger till deleteknapp i onGoing 
+    //Adds a deletebutton to active list
     var deleteButton = document.createElement('button');
     const d = document.createTextNode("delete");
     deleteButton.id = "deleteButton";
     deleteButton.appendChild(d);
-    onGoing.appendChild(deleteButton);
+    active.appendChild(deleteButton);
     input.value = '';
 
 
 
 
+    //deletes buttons and todotext
     deleteButton.addEventListener('click', deleteTodo);
 
     function deleteTodo() {
-        onGoing.removeChild(li);
-        onGoing.removeChild(deleteButton);
-        onGoing.removeChild(doneButton);
+        active.removeChild(li);
+        active.removeChild(deleteButton);
+        active.removeChild(doneButton);
 
     }
 
-
+    //deletes everything
     deleteAllButton.addEventListener('click', deleteAll);
 
     function deleteAll() {
-        onGoing.innerHTML = '';
+        active.innerHTML = '';
         finished.innerHTML = '';
 
     }
 
 
-    //flyttar raden från att göra listan till har gjort listan
+    //Moves todo from todolist to finished list
     doneButton.addEventListener('click', moveDone);
 
     function moveDone() {
-        onGoing.removeChild(li);
-        onGoing.removeChild(doneButton);
-        onGoing.removeChild(deleteButton);
+        active.removeChild(li);
+        active.removeChild(doneButton);
+        active.removeChild(deleteButton);
         finished.appendChild(li);
         finished.appendChild(deleteButton);
     }
 
-    //      raderar listan och knappen när jag trycker på delete
+    //  Deletes finished list and button   
     deleteButton.addEventListener('click', deleteDoneList);
 
     function deleteDoneList() {
