@@ -1,29 +1,35 @@
-
 @font-face {
-  font-family: font;
-  src: url(font.ttf)
+    font-family: font;
+    src: url(font.ttf)
 }
 
-header{
+/*****************header start**************/
+
+header {
     display: flex;
     height: 30px;
     margin-bottom: 10px;
     color: white;
-    background: rgb(5,2,1); 
-    background: -moz-linear-gradient(left, rgba(5,2,1,1) 0%, rgba(4,21,168,1) 53%, rgba(5,3,2,1) 100%); 
-    background: -webkit-linear-gradient(left, rgba(5,2,1,1) 0%,rgba(4,21,168,1) 53%,rgba(5,3,2,1) 100%); 
-    background: linear-gradient(to right, rgba(5,2,1,1) 0%,rgba(4,21,168,1) 53%,rgba(5,3,2,1) 100%); 
+    background: rgb(5, 2, 1);
+    background: -moz-linear-gradient(left, rgba(5, 2, 1, 1) 0%, rgba(4, 21, 168, 1) 53%, rgba(5, 3, 2, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(5, 2, 1, 1) 0%, rgba(4, 21, 168, 1) 53%, rgba(5, 3, 2, 1) 100%);
+    background: linear-gradient(to right, rgba(5, 2, 1, 1) 0%, rgba(4, 21, 168, 1) 53%, rgba(5, 3, 2, 1) 100%);
     align-items: center;
     justify-content: center;
 
 }
+
 header > h3 {
-    
+
     align-items: center;
     padding: 0px;
     margin: 0px;
 }
-body{
+
+/*****************header end**************/
+
+
+body {
     padding: 0px;
     margin: 0px;
     height: 100%;
@@ -31,28 +37,31 @@ body{
     background-color: #0415A8;
     background-attachment: fixed;
     background-size: cover;
+     -webkit-animation: fadein 3s ease 0s forwards;
+    animation: fadein 3s ease 0s forwards;
+    animation-fill-mode: both !important;
+    visibility: visible !important;
 
 
 }
 
+/*************main content start**********/
 
-.main-container{
-    //border: 1px solid white;
+.main-container {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
 
 }
-.main{
+
+.main {
     border: 1px solid white;
     min-width: 250px;
     margin: 2px;
 }
 
-#active{
+#active {
     padding-left: 0px;
-    
-    
 }
 
 #input::placeholder {
@@ -62,53 +71,50 @@ body{
     color: lightgray;
 }
 
-.rows{
+.rows {
     display: flex;
 }
+
 .leftrow {
-	box-sizing: border-box;
+    box-sizing: border-box;
     width: 50%;
     min-height: 300px;
 }
+
 .rightfinished {
-	box-sizing: border-box;
+    box-sizing: border-box;
     width: 50%;
     min-height: 300px;
 }
 
 
 
-li{
+li {
 
     list-style-type: none;
     width: 100%;
     height: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
-    //background-color: rgba(250, 250, 250, 0.6)
 
 }
 
-li#items{
+li#items {
     text-align: center;
     color: #F5F358;
     -webkit-animation: fadein 3s ease 0s forwards;
     animation: fadein 3s ease 0s forwards;
     animation-fill-mode: both !important;
     visibility: visible !important;
-    
-}
-
-.content{
-    
-        //width: 100%;
-        border: 1px solid white;
-        box-sizing: border-box;
-
-
 
 }
-#active{
+
+.content {
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+#active {
     text-align: center;
     -webkit-animation: fadein 1s ease 0s forwards;
     animation: fadein 1s ease 0s forwards;
@@ -116,24 +122,22 @@ li#items{
     visibility: visible !important;
 }
 
-#finished{
+#finished {
     text-align: center;
 }
+
 ul {
-	list-style: none;
-    //border: 1px solid white;
-    
+    list-style: none;
 }
-ul li:before {
-    
-	//content: "\25b6";
-}
+
+
 .boxHeader {
     height: 100px;
-	display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
 }
+
 .headerText {
     display: flex;
     justify-content: center;
@@ -142,33 +146,34 @@ ul li:before {
     height: 40px;
     background: #A8AAB3;
 }
-h1{
-    
+
+h1 {
+
     padding: 0px;
     margin: 0px;
     color: white;
     box-sizing: border-box;
-    
-}
-h2{
-   color: white; 
-   text-align: center;
-}
-
-
-.center-focus{
-
-        border: 1px solid white;
-        box-sizing: border-box;
-
-
 
 }
-#items{
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+
+.center-focus {
+
+    border: 1px solid white;
+    box-sizing: border-box;
+
+}
+
+#items {
     margin: 5px;
 }
 
-#input{
+#input {
     background-color: #A8AAB3;
     padding: 0 0 0 2%;
     color: #000;
@@ -182,15 +187,21 @@ h2{
 
 
 }
+
+
+
+/*****************Buttons start**************/
+
 .buttonTest {
     display: flex;
-	border: 1px solid white;
+    border: 1px solid white;
     font-size: 0.8em;
 }
 
-#deleteButton, #doneButton{
+#deleteButton,
+#doneButton {
     font-family: font;
-     cursor: pointer;
+    cursor: pointer;
     color: white;
     font-size: 0.8rem;
     background: rgba(0, 0, 0, 0.1);
@@ -199,25 +210,26 @@ h2{
     padding: 4px 10px;
     line-height: 1;
     width: 64px;
-      -webkit-animation: fadein 1s ease 0s forwards;
+    -webkit-animation: fadein 1s ease 0s forwards;
     animation: fadein 1s ease 0s forwards;
     animation-fill-mode: both !important;
     visibility: visible !important;
 }
-#deleteButton:hover{
+
+#deleteButton:hover {
     background-color: #A60A12;
 }
 
 .inputandbutton {
-	display: flex;
+    display: flex;
     align-items: center;
 }
 
-#doneButton:hover{
+#doneButton:hover {
     background-color: #A60A12;
 }
 
-#addButton{
+#addButton {
     font-family: font;
     cursor: pointer;
     color: white;
@@ -231,116 +243,117 @@ h2{
     margin-right: 2%;
     margin-bottom: 8px;
 }
+
 #addButton:hover {
-	background: #A60A12; 
+    background: #A60A12;
 }
+
 #addButton:active {
-   box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 0px 3px rgba(0, 0, 0, 0.75);
     font-size: 2rem;
 
 }
 
-#deleteAllButton{
+#deleteAllButton {
     text-align: center;
     font-family: font;
-     cursor: pointer;
+    cursor: pointer;
     color: white;
     font-size: 0.8rem;
-    background: #A60A12; 
+    background: #A60A12;
     border: 1px solid white;
     padding: 4px 10px;
     line-height: 1;
     width: 84px;
 }
 
-#deleteAllButton:active, #doneButton:active, #deleteButton:active {
-	
-    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75);
+#deleteAllButton:active,
+#doneButton:active,
+#deleteButton:active {
+
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.75);
     font-size: 0.7rem;
 }
-.leftrow {
-	border: 1px solid white;
-}
-.rightfinished {
-	border: 1px solid white;
+
+/*****************Buttons end**************/
+
+
+.leftrow, .rightfinished {
+    border: 1px solid white;
 }
 
 #finished {
-	padding-left: 0px;
+    padding-left: 0px;
+}
+/*************main content end************/
+
+
+
+/************footer start*****************/
+
+.footer {
+    width: 100%;
+    padding-top: 30px; //display: flex;
+    text-align: center;
+    color: #F5F358; //border: 1px solid white;
 }
 
-.footer{
-    width: 100%;
-    padding-top: 30px;
-    //display: flex;
-    text-align: center;
-    color: #F5F358;
-    //border: 1px solid white;
-   
-}
-h3:nth-child(2){
+h3:nth-child(2) {
     color: white;
 }
+/***************footer end**************/
 
 
-.fadein {
-  -webkit-animation: fadein 1s ease 0s forwards;
-    animation: fadein 1s ease 0s forwards;
-    animation-fill-mode: both !important;
-    visibility: visible !important;
-}
-@-webkit-keyframes fadein
-{
-    0%
-    {
+/***************fadein webkit/keyframes***********/
+
+@-webkit-keyframes fadein {
+    0% {
         opacity: 0;
     }
-    100%
-    {
-        opacity: 1;
-    }
-}
-@keyframes fadein
-{
-    0%
-    {
-        opacity: 0;
-    }
-    100%
-    {
+    100% {
         opacity: 1;
     }
 }
 
-@media screen and (max-width: 560px){
-    
-    h1{
-    
+@keyframes fadein {
+    0% {
+        opacity: 0;
     }
-    #input{
+    100% {
+        opacity: 1;
+    }
+}
+/*******************end fadein**********/
+
+
+/******************media screen start***/
+
+@media screen and (max-width: 560px) {
+
+    h1 {}
+    #input {
         width: 100%;
     }
-    
+
     #addButton {
-	width: 100%;
-}
+        width: 100%;
+    }
     .inputandbutton {
-	display: block;
-}
-    
-    .rows{
         display: block;
-        
+    }
+
+    .rows {
+        display: block;
+
     }
     .leftrow {
-	width: 100%;
-}
+        width: 100%;
+    }
     .rightfinished {
-	width: 100%;
-}
-    header{
+        width: 100%;
+    }
+    header {
         display: none;
     }
 }
-
-
+/*************media screen end**********/
