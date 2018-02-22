@@ -1,7 +1,9 @@
+/*******font******/
 @font-face {
     font-family: font;
     src: url(font.ttf)
 }
+/******font********/
 
 /*****************header start**************/
 
@@ -24,6 +26,11 @@ header > h3 {
     align-items: center;
     padding: 0px;
     margin: 0px;
+}
+
+header > h3 > a > img{
+    width: 18px;
+    height: 18px;
 }
 
 /*****************header end**************/
@@ -100,6 +107,7 @@ li {
 }
 
 li#items {
+
     text-align: center;
     color: #F5F358;
     -webkit-animation: fadein 3s ease 0s forwards;
@@ -157,6 +165,7 @@ h1 {
 }
 
 h2 {
+    text-decoration: underline;
     color: white;
     text-align: center;
 }
@@ -293,14 +302,15 @@ h2 {
 
 .footer {
     width: 100%;
-    padding-top: 30px; //display: flex;
+    padding-top: 10px; 
     text-align: center;
-    color: #F5F358; //border: 1px solid white;
+    color: #F5F358; 
 }
 
 h3:nth-child(2) {
     color: white;
 }
+
 /***************footer end**************/
 
 
@@ -330,7 +340,6 @@ h3:nth-child(2) {
 
 @media screen and (max-width: 560px) {
 
-    h1 {}
     #input {
         width: 100%;
     }
@@ -348,9 +357,11 @@ h3:nth-child(2) {
     }
     .leftrow {
         width: 100%;
+        min-height: 150px;
     }
     .rightfinished {
         width: 100%;
+        min-height: 150px;
     }
     header {
         display: none;
